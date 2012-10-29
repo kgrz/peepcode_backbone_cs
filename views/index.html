@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script src="js/jquery.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/backbone.js"></script>
+    <script src="js/tunes.js"></script>
+
+    <script type="text/template" id="library-template">
+      <h1>Music Library</h1>a
+      <ul class="albums"></ul>
+    </script>
+    <script type="text/template" id="album-template">
+      <span class="album-title"><%= title %></span>
+      <span class="artist-name"><%= artist %></span>
+      <ol class="tracks">
+        <% _.each(tracks, function(track){ %>
+          <li><%= track.title %></li>
+        <% }); %>
+      </ol>
+    </script>
+  </head>
+  <body>
+    <div id="container">
+    </div>
+  </body>
+</html>
